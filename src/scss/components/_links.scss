@@ -10,10 +10,10 @@ a {
 //     --bs-link-hover-color-rgb: var(--theme-white-60-rgb);
 // }
 
-.link-social {
-    &:hover {
-        opacity: 0.6;
-    }
+.inline-icon {
+    flex-shrink: 0;
+    vertical-align: -.125em;
+    transition: .2s ease-in-out transform;
 }
 
 .stretched-link::after {

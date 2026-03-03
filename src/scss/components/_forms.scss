@@ -1,11 +1,14 @@
 /*------------------------------------------------------------------
 [ forms ]*/
 
+// form-control
 .form-control {
-    font-size: 16px;
+    --bs-border-width: 2px;
+    font-size: 18px;
     font-weight: 400;
-    color: #767B89;
+    color: #050505;
     box-shadow: none !important;
+    border-color: transparent;
 
     &:focus {
         color: #050505;
@@ -17,68 +20,55 @@
     // }
 }
 
+// input sizes
 .input-m {
     min-height: 40px;
     padding: 10px 16px;
 }
-
 .input-l {
     min-height: 60px;
     padding: 12px 22px;
 }
 
-.form-check {
-    font-size: 18px;
+// form-floating
+.form-floating > .form-control.input-l,
+.form-floating > .form-control-plaintext.input-l,
+.form-floating > .form-select.input-l {
+    height: 60px;
+    min-height: 60px;
+}
+.form-floating > label {
+    color: #767B89;
 }
 
+// form-check
+.form-check {
+    font-size: 20px;
+}
 .form-check-input {
     --bs-border-width: 2px;
-    --bs-form-check-bg: transparent;
+    // --bs-form-check-bg: transparent;
 
-    &:checked {
-        background-color: transparent;
-        border-color: #E8D2A8;
-    }
+    // &:checked {
+    //     background-color: #415EF6;
+    //     border-color: #415EF6;
+    // }
 
     &:focus {
         box-shadow: none;
     }
 
     &[type=checkbox] {
-        border-radius: 0.075em;
+        border-radius: 2px;
     }
 }
-
 .form-check-label {
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 1.3;
-    letter-spacing: 0.02em;
+    color: #767B89;
+    font-size: 13px;
 }
 
-@include media-breakpoint-up(lg) {
-    .form-control {
-        font-size: 20px;
-    }
-
-    .input-m {
-        min-height: 50px;
-    }
-
-    .input-l {
-        min-height: 70px;
-    }
-
-    textarea.input-l {
-        min-height: 70px;
-        padding: 20px 22px;
-    }
-
-    .form-check {
-        font-size: 36px;
-    }
-
+@include media-breakpoint-up(xl) {
     .form-check-label {
-        font-size: 18px;
+        font-size: 15px;
     }
 }
