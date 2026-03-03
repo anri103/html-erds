@@ -1,0 +1,51 @@
+/*------------------------------------------------------------------
+[ variables ]*/
+
+:root {
+    // Theme fonts
+    --theme-ff-main: 'TikTok Sans', sans-serif;
+    --theme-ff-title: 'TikTok Sans', sans-serif;
+
+    // Theme colors HEX
+    // --theme-purple: #412752;
+
+    // Theme colors RGB
+    // --theme-purple-rgb: 65, 39, 82;
+
+    // Theme font sizes
+    --fs-h1: 32px;
+    --fs-h2: 28px;
+    --fs-h3: 20px;
+    --fs-h4: 18px;
+    --fs-h5: 16px;
+    --fs-h6: 14px;
+    --fs-small: 13px;
+    --fs-x-small: 12px;
+
+    // Swiper
+    --swiper-theme-color: #415EF6;
+
+    @include media-breakpoint-up(xl) {
+        --bs-body-font-size: 18px;
+        --fs-h1: 48px;
+        --fs-h2: 40px;
+        --fs-h3: 28px;
+        --fs-h4: 22px;
+        --fs-h5: 18px;
+        --fs-h6: 16px;
+        --fs-small: 15px;
+        --fs-x-small: 14px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+        --bs-body-font-size: 22px;
+        --fs-h1: 68px;
+        --fs-h2: 56px;
+        --fs-h3: 36px;
+        --fs-h4: 32px;
+        --fs-h5: 18px;
+        --fs-h6: 16px;
+        --fs-small: 15px;
+        --fs-x-small: 14px;
+    }
+}

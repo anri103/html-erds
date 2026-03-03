@@ -1,0 +1,84 @@
+/*------------------------------------------------------------------
+[ forms ]*/
+
+.form-control {
+    font-size: 16px;
+    font-weight: 400;
+    color: #767B89;
+    box-shadow: none !important;
+
+    &:focus {
+        color: #050505;
+        border-color: #687DF7;
+    }
+
+    // &::placeholder {
+    //     opacity: 0.6;
+    // }
+}
+
+.input-m {
+    min-height: 40px;
+    padding: 10px 16px;
+}
+
+.input-l {
+    min-height: 60px;
+    padding: 12px 22px;
+}
+
+.form-check {
+    font-size: 18px;
+}
+
+.form-check-input {
+    --bs-border-width: 2px;
+    --bs-form-check-bg: transparent;
+
+    &:checked {
+        background-color: transparent;
+        border-color: #E8D2A8;
+    }
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &[type=checkbox] {
+        border-radius: 0.075em;
+    }
+}
+
+.form-check-label {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+}
+
+@include media-breakpoint-up(lg) {
+    .form-control {
+        font-size: 20px;
+    }
+
+    .input-m {
+        min-height: 50px;
+    }
+
+    .input-l {
+        min-height: 70px;
+    }
+
+    textarea.input-l {
+        min-height: 70px;
+        padding: 20px 22px;
+    }
+
+    .form-check {
+        font-size: 36px;
+    }
+
+    .form-check-label {
+        font-size: 18px;
+    }
+}

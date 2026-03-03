@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon/favicon.svg" sizes="32x32" />
+    <title>Главная</title>
+
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <!-- preloader -->
+    <div class="preloader" id="preloader">
+        <div class="animation-preloader">
+            <div class="spinner"></div>
+            <p class="text-center">Загрузка</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- header -->
+    <header class="header" id="siteHeader">
+
+        <!-- desktop -->
+        <div class="header-bar header__desktop" data-device="desktop">
+            <div class="header-row main-row">
+                <div class="container">
+    
+                    <!-- logo -->
+                    <div class="header-widget__logo">
+                        <a href="index.html">
+                            <img src="img/logo/logo.svg" alt="Единая Реабилитационная Дистанционная Система мониторинга">
+                        </a>
+                    </div>
+    
+                    <!-- navigation -->
+                    <nav class="header-widget__navigation">
+                        <ul class="primary-nav" id="primaryNav">
+                            <li>
+                                <a href="#homeAboutUs">
+                                    <span>Область применения</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#homeCategories">
+                                    <span>Функции</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#homeProcess">
+                                    <span>Принцип работы</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#homePrice">
+                                    <span>Структура</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+    
+                    <!-- sign-btn -->
+                    <a href="#" class="header-widget__sign-btn btn btn-outline-secondary btn-l">Войти в кабинет врача</a>
+    
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile -->
+        <div class="header-bar header__mobile" data-device="mobile">
+            <div class="header-row main-row">
+                <div class="container">
+    
+                    <!-- logo -->
+                    <div class="header-widget__logo">
+                        <a href="index.html">
+                            <img src="img/logo/logo.svg" alt="Мобильные системы и технологии">
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- sign-btn -->
+                        <a href="#" class="header-widget__sign-btn btn btn-outline-secondary btn-l">Войти в кабинет врача</a>
+        
+                        <!-- mobile-toggler -->
+                        <button type="button" class="header-widget__mobile-toggler btn btn-primary btn-icon-l" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                <rect width="30" height="2" fill="currentColor"/>
+                                <rect y="8" width="22" height="2" fill="currentColor"/>
+                                <rect y="16" width="30" height="2" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- offcanvas-mobilemenu -->
+    <div class="offcanvas offcanvas-mobilemenu offcanvas-top" data-bs-scroll="true" tabindex="-1" id="offcanvasMobileMenu">
+        <div class="offcanvas-header">
+            <div class="offcanvas-mobilemenu__logo">
+                <a href="index.html">
+                    <img class="img-fluid" src="img/logo/logo.svg" alt="Мобильные системы и технологии">
+                </a>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex flex-column justify-content-between" style="min-height: 100%; gap: 80px;">
+                <!-- mobile-nav -->
+                <nav class="mobile-navigation">
+                    <ul class="mobile-nav" id="mobileNav">
+                        <li>
+                            <a href="#homeAboutUs">
+                                <span>Область применения</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#homeCategories">
+                                <span>Функции</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#homeProcess">
+                                <span>Принцип работы</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#homePrice">
+                                <span>Структура</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- contacts -->
+                <div class="offcanvas-mobilemenu__contacts">
+                    <div>
+                        <a href="tel:+79999999999" target="_blank">
+                            <span>+7 999 999-99-99</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="mailto:support@erds.ru" target="_blank">
+                            <span>support@erds.ru</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- sign-btn -->
+                <div class="d-flex align-items-center flex-column gap-2 mb-10px">
+                    <a href="#" class="btn btn-outline-secondary btn-l">Войти в кабинет врача</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- main -->
+<main class="main">
+
+    <!-- section-home-hero -->
+    <section class="section section-home-hero" id="homeHero">
+    <div class="container-fluid no-gutters-x-down-md">
+        <div class="position-relative overflow-hidden rounded-4 bg-primary-gradient p-24px p-lg-40px p-xl-60px p-xxl-80px">
+            <!-- grid -->
+            <div class="d-grid grid-cols-24 gap-0">
+
+                <!-- col content -->
+                <div class="col-span-24 col-span-sm-13">
+                    <div class="position-relative h-100">
+                        <h1 class="section-home-hero__title wow img-custom-anim-left" data-wow-duration="1.2s" data-wow-delay="0.1s">
+                            Единая <span class="hero-badge">ЕРДС</span> Реабилитационная Дистанционная Система мониторинга
+                        </h1>
+                        <div class="section-home-hero__subtitle wow img-custom-anim-right" data-wow-duration="1.5s" data-wow-delay="0.1s">Цифровая система поддержки специалистов и&nbsp;сопровождения пациентов в&nbsp;процессе выполнения реабилитационных программ</div>
+                        <div class="section-home-hero__btn-wrapper d-none d-md-block wow fadeInUp" data-wow-duration="1.2s" data-wow-delay="0.3s">
+                            <div class="wrapper-title">
+                                <img class="shape-arrow" src="img/home/shape-arrow.svg" alt="">
+                                <div class="h4 fw-800 mb-0">Для&nbsp;подключения к&nbsp;системе заполните форму ниже</div>
+                            </div>
+                            <div class="d-flex flex-wrap gap-3">
+                                <a href="#" class="btn btn-primary btn-l">Подать заявку</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- col image -->
+                <div class="col-span-24 col-span-sm-11">
+                    <div class="section-home-hero__img-spacer"></div>
+                    <img class="section-home-hero__img wow fadeInUp" src="img/home/hero-img-01.png" alt="ЕРДС" data-wow-duration="1.2s" data-wow-delay="0.1s">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section-home-hero__btn-wrapper d-md-none">
+            <div class="wrapper-title">
+                <img class="shape-arrow" src="img/home/shape-arrow.svg" alt="">
+                <div class="h4 fw-800 mb-0">Для&nbsp;подключения к&nbsp;системе заполните форму ниже</div>
+            </div>
+            <div class="d-flex flex-wrap gap-3">
+                <a href="#" class="btn btn-primary btn-l">Подать заявку</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+    <!-- section-categories -->
+    <section class="section section-home-categories" id="homeCategories">
+    <div class="container">
+
+        <!-- header -->
+        <div class="section__header section-home-categories__header">
+            <h2 class="section__title">Область применения</h2>
+        </div>
+
+        <!-- grid -->
+        <div class="d-grid grid-cols-24 row-gap-30px gap-lg-30px gap-xl-20px">
+            <!-- col -->
+            <div class="col-span-24 col-span-lg-15">
+                <!-- grid -->
+                <div class="d-grid grid-cols-24 row-gap-10px gap-lg-10px gap-xl-20px">
+                    <!-- card -->
+                    <div class="card card-category col-span-24 col-span-lg-12 col-span-xl-7">
+                        <div class="card-body">
+                            <div class="d-flex flex-column h-100">
+                                <div class="card-heading flex-fill">
+                                    <div class="card-title h4 fw-800">Медицинская реабилитация</div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-end gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="card card-category col-span-24 col-span-lg-12 col-span-xl-10">
+                        <div class="card-body">
+                            <div class="d-flex flex-column h-100">
+                                <div class="card-heading flex-fill">
+                                    <div class="card-title h4 fw-800">Лечебная физическая культура</div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-end gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="card card-category col-span-24 col-span-lg-12 col-span-xl-7">
+                        <div class="card-body">
+                            <div class="d-flex flex-column h-100">
+                                <div class="card-heading flex-fill">
+                                    <div class="card-title h4 fw-800">Спортивная медицина</div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-end gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="card card-category col-span-24 col-span-lg-12 col-span-xl-12">
+                        <div class="card-body">
+                            <div class="d-flex flex-column h-100">
+                                <div class="card-heading flex-fill">
+                                    <div class="card-title h4 fw-800">Восстановительные программы</div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-end gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card -->
+                    <div class="card card-category col-span-24 col-span-lg-24 col-span-xl-12">
+                        <div class="card-body">
+                            <div class="d-flex flex-column h-100">
+                                <div class="card-heading flex-fill">
+                                    <div class="card-title h4 fw-800">Контроль техники выполнения упражнений</div>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-end gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                        <rect width="10" height="10" rx="5" fill="#7AB656"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- col -->
+            <div class="col-span-24 col-span-lg-9">
+                <div class="d-flex align-items-end gap-20px gap-xl-40px">
+                    <img class="section-thumb-img" src="img/home/categories-thumb-01.png" alt="">
+                    <div class="text-gray-70">
+                        <img class="img-fluid w-60px w-xl-80px mb-10px" src="img/home/categoriesIcon.svg" alt="">
+                        <p class="mb-0">ЕРДС&nbsp;— прикладной программный комплекс, предназначенный для&nbsp;анализа техники выполнения физических упражнений и&nbsp;цифрового сопровождения программ восстановления</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-home-functions -->
+    <section class="section section-home-functions" id="homeFunctions">
+    <div class="container">
+
+        <!-- header -->
+        <div class="section__header section-home-functions__header">
+            <h2 class="section__title">Функциональные возможности</h2>
+        </div>
+
+        <!-- grid -->
+        <div class="d-grid grid-cols-24 row-gap-30px gap-lg-30px gap-xl-40px gap-xxl-60px">
+            <!-- col (items) -->
+            <div class="col-span-24 col-span-lg-9 col-span-xl-10">
+                <div class="d-flex flex-column gap-20px gap-xl-40px gap-xxl-60px">
+                    <!-- item -->
+                    <div class="item-function">
+                        <div class="h4 fw-800 mb-2">Контроль выполнения программы</div>
+                        <div class="text-gray-70 mb-0">Выполнение пациентом упражнений по&nbsp;назначенной программе с&nbsp;автоматической фиксацией регулярности и&nbsp;соблюдения режима занятий</div>
+                    </div>
+                    <!-- item -->
+                    <div class="item-function">
+                        <div class="h4 fw-800 mb-2">Количественный анализ движений</div>
+                        <div class="text-gray-70 mb-0">Автоматический подсчёт повторений и&nbsp;оценка параметров движения, включая анализ амплитуды в&nbsp;суставах</div>
+                    </div>
+                    <!-- item -->
+                    <div class="item-function">
+                        <div class="h4 fw-800 mb-2">Оценка техники выполнения</div>
+                        <div class="text-gray-70 mb-0">Качественный анализ упражнений с&nbsp;предоставлением визуальной обратной связи пользователю</div>
+                    </div>
+                    <!-- item -->
+                    <div class="item-function">
+                        <div class="h4 fw-800 mb-2">Сбор субъективной обратной связи</div>
+                        <div class="text-gray-70 mb-0">Получение данных о&nbsp;самочувствии пациента через&nbsp;встроенные опросы</div>
+                    </div>
+                </div>
+            </div>
+            <!-- col (img) -->
+            <div class="col-span-24 col-span-lg-6 col-span-xl-4">
+                <div class="d-flex align-items-center justify-content-center h-100">
+                    <img class="section-thumb-img" src="img/home/functions-thumb-01.png" alt="">
+                </div>
+            </div>
+            <!-- col (items) -->
+            <div class="col-span-24 col-span-lg-9 col-span-xl-10">
+                <div class="d-flex flex-column gap-20px gap-xl-40px gap-xxl-60px">
+                    <!-- item -->
+                    <div class="item-function">
+                        <div class="h4 fw-800 mb-2">Дистанционная коммуникация</div>
+                        <div class="text-gray-70 mb-0">Встроенный чат&nbsp;для&nbsp;взаимодействия пациента со&nbsp;специалистом</div>
+                    </div>
+                    <!-- item -->
+                    <div class="item-function">
+                        <div class="h4 fw-800 mb-2">Аналитика и&nbsp;визуализация прогресса</div>
+                        <div class="text-gray-70 mb-0">Формирование статистики и&nbsp;наглядных графиков динамики показателей пациента во&nbsp;времени</div>
+                    </div>
+                    <!-- item -->
+                    <div class="item-function">
+                        <div class="h4 fw-800 mb-2">Скрининговая диагностика</div>
+                        <div class="text-gray-70 mb-0">Проведение тестов для&nbsp;оценки готовности к&nbsp;переходу на&nbsp;следующий этап реабилитации</div>
+                    </div>
+                    <!-- item -->
+                    <div class="item-function">
+                        <div class="h4 fw-800 mb-2">Кабинет специалиста и&nbsp;хранение данных</div>
+                        <div class="text-gray-70 mb-0">Веб-интерфейс для&nbsp;мониторинга выполнения программы, анализа динамики, корректировки плана реабилитации и&nbsp;хранения данных пациента</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-home-how-works -->
+    <section class="section section-home-how-works" id="homeHowWorks">
+    <div class="container">
+
+        <!-- header -->
+        <div class="section__header section-home-how-works__header">
+            <h2 class="section__title">Принцип работы системы</h2>
+        </div>
+
+        <!-- grid -->
+        <div class="d-grid grid-cols-24 row-gap-10px gap-md-10px gap-xl-20px">
+            <!-- item -->
+            <div class="d-flex flex-column bg-primary-20 rounded p-20px col-span-24 col-span-md-12 col-span-xl-6">
+                <div class="flex-fill">
+                    <div>Специалист формирует и&nbsp;назначает пациенту индивидуальную программу упражнений через&nbsp;веб-интерфейс</div>
+                </div>
+                <div class="h1 fw-800 lh-1 text-primary-40 mt-20px mt-xl-40px mb-0">1</div>
+            </div>
+            <!-- item -->
+            <div class="d-flex flex-column bg-primary-20 rounded p-20px col-span-24 col-span-md-12 col-span-xl-6">
+                <div class="flex-fill">
+                    <div>Пациент получает программу в&nbsp;мобильном приложении и&nbsp;выполняет упражнения в&nbsp;соответствии с&nbsp;назначением</div>
+                </div>
+                <div class="h1 fw-800 lh-1 text-primary-40 mt-20px mt-xl-40px mb-0">2</div>
+            </div>
+            <!-- item -->
+            <div class="d-flex flex-column bg-primary-20 rounded p-20px col-span-24 col-span-md-12 col-span-xl-6">
+                <div class="flex-fill">
+                    <div>Во&nbsp;время выполнения фиксируются данные о&nbsp;регулярности, повторениях, параметрах движения, результатах скрининговых тестов и&nbsp;ответах на&nbsp;опросы</div>
+                </div>
+                <div class="h1 fw-800 lh-1 text-primary-40 mt-20px mt-xl-40px mb-0">3</div>
+            </div>
+            <!-- item -->
+            <div class="d-none d-xl-flex align-items-center justify-content-center col-span-24 col-span-md-12 col-span-xl-6">
+                <img class="img-fluid w-80px w-xxl-100px flex-shrink-0" src="img/home/howWorksIcon-1.svg" alt="">
+            </div>
+            <!-- item -->
+            <div class="d-none d-xl-flex align-items-center justify-content-center col-span-24 col-span-md-12 col-span-xl-6">
+                <img class="img-fluid w-80px w-xxl-100px flex-shrink-0" src="img/home/howWorksIcon-2.svg" alt="">
+            </div>
+            <!-- item -->
+            <div class="d-flex flex-column bg-primary-20 rounded p-20px col-span-24 col-span-md-12 col-span-xl-6">
+                <div class="flex-fill">
+                    <div>Данные автоматически сохраняются и&nbsp;формируют динамику выполнения программы во&nbsp;времени</div>
+                </div>
+                <div class="h1 fw-800 lh-1 text-primary-40 mt-20px mt-xl-40px mb-0">4</div>
+            </div>
+            <!-- item -->
+            <div class="d-flex flex-column bg-primary-20 rounded p-20px col-span-24 col-span-md-12 col-span-xl-6">
+                <div class="flex-fill">
+                    <div>Специалист через&nbsp;веб-интерфейс отслеживает выполнение, анализирует динамику и&nbsp;при&nbsp;необходимости корректирует программу</div>
+                </div>
+                <div class="h1 fw-800 lh-1 text-primary-40 mt-20px mt-xl-40px mb-0">5</div>
+            </div>
+            <!-- item -->
+            <div class="d-flex flex-column bg-primary-20 rounded p-20px col-span-24 col-span-md-12 col-span-xl-6">
+                <div class="flex-fill">
+                    <div>Между&nbsp;очными визитами осуществляется дистанционная коммуникация пациента со&nbsp;специалистом</div>
+                </div>
+                <div class="h1 fw-800 lh-1 text-primary-40 mt-20px mt-xl-40px mb-0">6</div>
+            </div>
+            <!-- item -->
+            <div class="d-flex flex-column bg-primary-20 rounded p-20px col-span-24 col-span-md-24 col-span-xl-12 col-start-xl-13">
+                <div class="flex-fill">
+                    <div class="h4 fw-800 mb-0">ЕРДС&nbsp;— объединяет специалиста и&nbsp;пациента в&nbsp;едином информационном контуре</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-home-structure -->
+    <section class="section section-home-structure" id="homeStructure">
+    <div class="container">
+
+        <!-- header -->
+        <div class="section__header section-home-structure__header">
+            <h2 class="section__title">Структура программного комплекса</h2>
+        </div>
+
+        <!-- grid -->
+        <div class="d-grid grid-cols-6 row-gap-20px row-gap-md-20px gap-md-40px row-gap-xl-40px gap-xl-60px row-gap-xxl-60px">
+            <!-- item -->
+            <div class="d-flex flex-column col-span-6 col-span-md-3 col-span-xl-2">
+                <div class="mb-15px mb-xxl-20px">
+                    <img class="img-fluid w-60px w-xl-80px w-xxl-100px flex-shrink-0" src="img/home/android.svg" alt="android">
+                </div>
+                <div>Мобильное приложение (Android) — предназначено для&nbsp;выполнения пациентом назначенной программы и&nbsp;передачи данных в&nbsp;систему</div>
+            </div>
+            <!-- item -->
+            <div class="d-flex flex-column col-span-6 col-span-md-3 col-span-xl-2">
+                <div class="mb-15px mb-xxl-20px">
+                    <img class="img-fluid w-60px w-xl-80px w-xxl-100px flex-shrink-0" src="img/home/laravel.svg" alt="laravel">
+                </div>
+                <div>Серверная часть (Laravel) — обеспечивает хранение данных, обработку информации и&nbsp;взаимодействие компонентов системы через&nbsp;API</div>
+            </div>
+            <!-- item -->
+            <div class="d-flex flex-column col-span-6 col-span-md-3 col-span-xl-2">
+                <div class="mb-15px mb-xxl-20px">
+                    <img class="img-fluid w-60px w-xl-80px w-xxl-100px flex-shrink-0" src="img/home/web-ui.svg" alt="web-ui">
+                </div>
+                <div>Веб-интерфейс&nbsp;— включает личный кабинет врача и&nbsp;административную панель для&nbsp;управления программами и&nbsp;пользователями</div>
+            </div>
+            <!-- item -->
+            <div class="d-flex flex-column col-span-6 col-span-md-3 col-span-xl-2">
+                <div class="mb-15px mb-xxl-20px">
+                    <img class="img-fluid w-60px w-xl-80px w-xxl-100px flex-shrink-0" src="img/home/video.svg" alt="video">
+                </div>
+                <div>Обработка видеопотока производится на&nbsp;устройстве пользователя</div>
+            </div>
+            <!-- item -->
+            <div class="d-flex flex-column col-span-6 col-span-md-3 col-span-xl-2">
+                <div class="mb-15px mb-xxl-20px">
+                    <img class="img-fluid w-60px w-xl-80px w-xxl-100px flex-shrink-0" src="img/home/server.svg" alt="server">
+                </div>
+                <div>Хранение данных осуществляется на&nbsp;серверах, размещённых на&nbsp;территории Российской Федерации</div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- section-cta-connection -->
+    <section class="section section-cta-connection" id="homeCtaConnection">
+    <div class="container-fluid no-gutters-x-down-md">
+        <div class="position-relative overflow-hidden rounded-4 bg-primary-gradient p-24px p-lg-40px p-xl-60px p-xxl-80px">
+            <!-- grid -->
+            <div class="d-grid grid-cols-24 gap-0">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-wrapper">
+                
+                <!-- footer-main-bar -->
+                <div class="footer-main-bar">
+                    <div class="footer-main-bar__widget">
+                        <div class="footer-logo">
+                            <img src="img/logo/logo.svg" alt="Единая Реабилитационная Дистанционная Система мониторинга">
+                        </div>
+                    </div>
+                    <div class="footer-main-bar__widget">
+                        <nav class="footer-navigation">
+                            <ul class="nav footer-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Главная</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">О нас</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Направления</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Команда</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Процесс работы</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-main-bar__widget">
+                        <nav class="footer-navigation">
+                            <ul class="nav footer-nav">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Политика конфиденциальности</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Публичная оферта</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">Политика использования cookies</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer-main-bar__widget">
+                        <div class="footer-contacts d-flex flex-column gap-15 gap-md-20">
+                            <div>
+                                <a href="tel:88007001212">8 800 700 1212</a>
+                            </div>
+                            <div>
+                                <a href="mailto:info@most.team">info@most.team</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- footer-copyright-bar -->
+                <div class="footer-copyright-bar">
+                    <div class="footer-copyright-bar__widget">
+                        <div class="d-flex flex-wrap gap-15">
+                            <div>ООО «СМАРТКОИН»</div>
+                            <div>ИНН 1215218922</div>
+                            <div>ОГРН 1171215005620</div>
+                        </div>
+                    </div>
+                    <div class="footer-copyright-bar__widget">
+                        <div>©МоСТ, 2025</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- modal-success -->
+    <!-- include('../modals/success.html') -->
+
+    <!-- scripts -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/imask.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

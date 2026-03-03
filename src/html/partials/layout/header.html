@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon/favicon.svg" sizes="32x32" />
+    <title>@@title</title>
+
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <!-- preloader -->
+    <div class="preloader" id="preloader">
+        <div class="animation-preloader">
+            <div class="spinner"></div>
+            <p class="text-center">Загрузка</p>
+        </div>
+        <div class="loader">
+            <div class="row">
+                <div class="col-3 loader-section">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section">
+                    <div class="bg"></div>
+                </div>
+                <div class="col-3 loader-section">
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- header -->
+    <header class="header" id="siteHeader">
+
+        <!-- desktop -->
+        <div class="header-bar header__desktop" data-device="desktop">
+            <div class="header-row main-row">
+                <div class="container">
+    
+                    <!-- logo -->
+                    <div class="header-widget__logo">
+                        <a href="index.html">
+                            <img src="img/logo/logo.svg" alt="Единая Реабилитационная Дистанционная Система мониторинга">
+                        </a>
+                    </div>
+    
+                    <!-- navigation -->
+                    <nav class="header-widget__navigation">
+                        <ul class="primary-nav" id="primaryNav">
+                            <li>
+                                <a href="#homeAboutUs">
+                                    <span>Область применения</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#homeCategories">
+                                    <span>Функции</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#homeProcess">
+                                    <span>Принцип работы</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#homePrice">
+                                    <span>Структура</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+    
+                    <!-- sign-btn -->
+                    <a href="#" class="header-widget__sign-btn btn btn-outline-secondary btn-l">Войти в кабинет врача</a>
+    
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile -->
+        <div class="header-bar header__mobile" data-device="mobile">
+            <div class="header-row main-row">
+                <div class="container">
+    
+                    <!-- logo -->
+                    <div class="header-widget__logo">
+                        <a href="index.html">
+                            <img src="img/logo/logo.svg" alt="Мобильные системы и технологии">
+                        </a>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <!-- sign-btn -->
+                        <a href="#" class="header-widget__sign-btn btn btn-outline-secondary btn-l">Войти в кабинет врача</a>
+        
+                        <!-- mobile-toggler -->
+                        <button type="button" class="header-widget__mobile-toggler btn btn-primary btn-icon-l" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobileMenu">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                <rect width="30" height="2" fill="currentColor"/>
+                                <rect y="8" width="22" height="2" fill="currentColor"/>
+                                <rect y="16" width="30" height="2" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- offcanvas-mobilemenu -->
+    <div class="offcanvas offcanvas-mobilemenu offcanvas-top" data-bs-scroll="true" tabindex="-1" id="offcanvasMobileMenu">
+        <div class="offcanvas-header">
+            <div class="offcanvas-mobilemenu__logo">
+                <a href="index.html">
+                    <img class="img-fluid" src="img/logo/logo.svg" alt="Мобильные системы и технологии">
+                </a>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-flex flex-column justify-content-between" style="min-height: 100%; gap: 80px;">
+                <!-- mobile-nav -->
+                <nav class="mobile-navigation">
+                    <ul class="mobile-nav" id="mobileNav">
+                        <li>
+                            <a href="#homeAboutUs">
+                                <span>Область применения</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#homeCategories">
+                                <span>Функции</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#homeProcess">
+                                <span>Принцип работы</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#homePrice">
+                                <span>Структура</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- contacts -->
+                <div class="offcanvas-mobilemenu__contacts">
+                    <div>
+                        <a href="tel:+79999999999" target="_blank">
+                            <span>+7 999 999-99-99</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="mailto:support@erds.ru" target="_blank">
+                            <span>support@erds.ru</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- sign-btn -->
+                <div class="d-flex align-items-center flex-column gap-2 mb-10px">
+                    <a href="#" class="btn btn-outline-secondary btn-l">Войти в кабинет врача</a>
+                </div>
+            </div>
+        </div>
+    </div>

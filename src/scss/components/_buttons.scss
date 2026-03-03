@@ -1,0 +1,91 @@
+/*------------------------------------------------------------------
+[ buttons ]*/
+
+.btn {
+    --bs-btn-font-size: 16px;
+    --bs-btn-font-weight: 500;
+    --bs-btn-line-height: 1;
+    --bs-btn-border-width: 2px;
+    --bs-btn-disabled-opacity: 0.25;
+    --bs-btn-focus-box-shadow: none;
+    --bs-btn-border-radius: var(--bs-border-radius);
+    position: relative;
+    overflow: hidden;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    svg {
+        flex-shrink: 0;
+    }
+}
+
+.btn-m {
+    --bs-btn-padding-x: 12px;
+    --bs-btn-padding-y: 0;
+    --bs-btn-font-size: 14px;
+    min-height: 40px;
+}
+
+// .btn-icon-m {
+//     --bs-btn-padding-x: 0;
+//     --bs-btn-padding-y: 0;
+//     width: 40px;
+//     height: 40px;
+// }
+
+.btn-l {
+    --bs-btn-padding-x: 40px;
+    --bs-btn-padding-y: 0;
+    --bs-btn-font-size: 18px;
+    min-height: 60px;
+}
+
+.btn-icon-l {
+    --bs-btn-padding-x: 0;
+    --bs-btn-padding-y: 0;
+    width: 60px;
+    height: 60px;
+}
+
+// .btn-mobile-toggler {
+//     --bs-btn-padding-x: 14px;
+//     --bs-btn-padding-y: 12px;
+// }
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bs-primary);
+    --bs-btn-border-color: var(--bs-primary);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #050505;
+    --bs-btn-hover-border-color: #050505;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #050505;
+    --bs-btn-active-border-color: #050505;
+    --bs-btn-disabled-color: #d6d6d6;
+    --bs-btn-disabled-bg: #050505;
+    --bs-btn-disabled-border-color: #050505;
+}
+
+.btn-outline-secondary {
+    --bs-btn-color: #050505;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: #050505;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #050505;
+    --bs-btn-hover-border-color: #050505;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #050505;
+    --bs-btn-active-border-color: #050505;
+    --bs-btn-disabled-color: #d6d6d6;
+    --bs-btn-disabled-bg: #050505;
+    --bs-btn-disabled-border-color: #050505;
+}
+
+@include media-breakpoint-up(lg) {
+    .btn {
+        --bs-btn-font-size: 18px;
+    }
+}
