@@ -48,6 +48,7 @@
 .form-check-input {
     --bs-border-width: 2px;
     // --bs-form-check-bg: transparent;
+    box-shadow: none !important;
 
     // &:checked {
     //     background-color: #415EF6;
@@ -72,3 +73,59 @@
         font-size: 15px;
     }
 }
+
+.password-toggle {
+    position: relative;
+}
+
+// validation
+.invalid-feedback {
+    font-size: 16px;
+}
+
+.was-validated .form-check-input.is-valid,
+.was-validated .form-check-input:valid {
+    border-color: var(--bs-border-color);
+}
+.form-check-input.is-valid:checked,
+.was-validated .form-check-input:valid:checked {
+    background-color: #415EF6;
+    border-color: #415EF6;
+    box-shadow: none;
+}
+
+.was-validated .form-check-input.is-valid~.form-check-label,
+.was-validated .form-check-input:valid~.form-check-label {
+    color: #767B89;
+}
+
+// password-toggle-button
+.password-toggle-button {
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
+    color: #767B89;
+    font-size: 1.25rem;
+    transition: color .2s ease-in-out;
+}
+.password-toggle-button-icon svg {
+    max-width: 100%;
+}
+.was-validated .password-toggle:has(.form-control.is-invalid) .password-toggle-button,
+.was-validated .password-toggle:has(.form-control.is-valid) .password-toggle-button,
+.was-validated .password-toggle:has(.form-control:invalid) .password-toggle-button,
+.was-validated .password-toggle:has(.form-control:valid) .password-toggle-button {
+    right: 1.25rem;
+}
+
+// По умолчанию: показываем первую иконку (открытый глаз), скрываем вторую (зачёркнутый)
+.password-toggle-button .password-toggle-button-icon svg:nth-child(1) { display: block; }
+.password-toggle-button .password-toggle-button-icon svg:nth-child(2) { display: none;  }
+// Когда пароль показан — наоборот
+.password-toggle-button.password-visible .password-toggle-button-icon svg:nth-child(1) { display: none;  }
+.password-toggle-button.password-visible .password-toggle-button-icon svg:nth-child(2) { display: block; }

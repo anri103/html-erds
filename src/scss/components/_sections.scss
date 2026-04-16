@@ -393,3 +393,41 @@
         }
     }
 }
+
+/*------------------------------------------------------------------
+[ sign-in page ]*/
+
+/* section-sign-in */
+
+.section-sign-in {
+
+    > .container {
+        max-width: 800px;
+    }
+
+    .section-thumb-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-thumb-img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: -24px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        .section-thumb-wrapper {
+            height: 360px;
+        }
+
+        .section-thumb-img {
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            width: 360px;
+            margin-bottom: 0;
+        }
+    }
+}
